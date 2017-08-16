@@ -1,0 +1,39 @@
+this policy can give access to ec2 based on region and tag . right now this policy can give  access to 
+only ec2 which are in N Virginia and the they have tag ["Environment" : "Prod"] . 
+
+By simply changing region and the tag , you can make this policy customize to your desired region and tag 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            
+            "Effect": "Allow",
+            "Action": ["ec2:Describe*"],
+            "Resource": "*"
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": ["ec2:RunInstances"],
+            "Resource": [
+                "arn:aws:ec2:us-east-1:accountid:instance/*",
+                "arn:aws:ec2:us-east-1:accountid:key-pair/*",
+                "arn:aws:ec2:us-east-1:accountid:security-group/*",
+                "arn:aws:ec2:us-east-1:accountid:volume/*",
+                "arn:aws:ec2:us-east-1::image/ami-*"]
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "ec2:TerminateInstances",
+                "ec2:StopInstances",
+                "ec2:StartInstances"],
+            "Resource": "arn:aws:ec2:us-east-1:accountid:instance/*",
+            "Condition": {
+                "StringEquals": {"ec2:ResourceTag/Environment": "Prod"}
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+This document provide the access to cloudwatch log . but not all , only which you want to show to the user . 
+
+in the resource just paste the ARN of the log you want to give access to . 
+
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Action": [
+"logs:Describe*",
+"logs:Get*",
+"logs:TestMetricFilter",
+"logs:FilterLogEvents"
+],
+"Effect": "Allow",
+"Resource": [
+"arn:aws:logs:ap-southeast-2:xxxxxx:log-group:nginx-afgc-staging:log-stream:nginx-afgc-staging",
+"arn:aws:logs:ap-southeast-2:xxxxxx:log-group:php-afgc-staging:log-stream:php-afgc-staging"
+]
+}
+]
+}

@@ -1,0 +1,12 @@
+Use this policy to the user who will give access to other user 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "*"
+        }
+    ]
+}

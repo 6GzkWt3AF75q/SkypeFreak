@@ -1,0 +1,30 @@
+This policy will allow to Test and Monitor an app created in aws 
+No modification Required
+
+{
+   "Version": "2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "ec2:Describe*",
+            "elasticloadbalancing:Describe*",
+            "autoscaling:Describe*",
+            "cloudwatch:Describe*",
+            "cloudwatch:List*",
+            "cloudwatch:Get*",
+            "s3:Get*",
+            "s3:List*",
+            "sns:Get*",
+            "sns:List*",
+            "rds:Describe*",
+            "cloudformation:Describe*",
+        	"cloudformation:Get*",
+        	"cloudformation:List*",
+        	"cloudformation:Validate*",
+        	"cloudformation:Estimate*"
+         ],
+         "Resource":"*"
+      }
+   ]
+}

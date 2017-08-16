@@ -1,0 +1,87 @@
+This Policy will only give access to start and stop the ec2 instance . 
+
+To use this put the account_id , region and ec2 id in Resource section below 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSecurityGroupReferences",
+                "ec2:DescribeStaleSecurityGroups"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:StartInstances",
+                "ec2:StopInstances"
+            ],
+            "Resource": [
+                "arn:aws:ec2:<REGION>:<ACCOUNTNUMBER>:instance/i-<INSTANCE-ID>"   
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+
+
+
+CSSLP 
+AWS
+CLOUD 
+
+
+
+1. Option to go to and next previous questions - first questions does not have previous and last question does not have next question
+2. review to see all questions that not been answered.
+3. No need to add Q to all questions, people are not stupid - Example: Q. Which of the following object is ideal for keeping data alive for a single request?
+4. People should not see all right answers “answer” button is there.
+5. Option for admin to had “hint” to the question answered wrong.
+6. Option to admin to give number of tries for questions. People can have one chance or maybe two chance to answer the same question.
+7. Remove the timer.
+8. Option to go back to main menu only after the test is done. The user can’t just go back and start the quiz again.
+9. “Quiz App” on left top corner and the name of current test is on top right corner instead “all subject” will be DESIGN PATTERNS if the user tested now for this one.
+
+
+
+https://www.openshift.com/pricing/index.html
+
+
+Something would have been useful few years ago for auditing purposes. 
+
+PiSavar - The goal of this project is to find out the fake access points opened by the WiFi pineapple device using the PineAP module and to prevent clients from being affected by initiating a deauthentication attack to the attacking device.
+
+
+Major Financial Institution
+
+Iam gui
+
+
+Try visualise a team of employees that work in startup and set a IAM role with proper policies for every position that needs to have access to development, testing or deployment environments.
+
+
+So I can share the list of possible people that might need access like:
+
+DB, server-side, client side, security auditor, Devops, CEO, CTO, SEO specialist and more…
+
+Most of these people will need to have their own role with specific policies attached for each of them. 
+
+I understand that we create one role with policies other might needs more or less but at least we have very good base
+
+
+Are you able to help create those roles and describe each role what they expected to do from your experience 
+
+
+You might want to use this to remind you what positions are out there so you can create their roles with proper policies 
+
+https://skillcrush.com/2015/03/05/41-tech-job-titles/
+
+

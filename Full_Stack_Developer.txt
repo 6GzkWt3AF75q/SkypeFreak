@@ -1,0 +1,23 @@
+this policy will allow user to do develope the app , test it and deploy it . ( end to end)
+
+No modification required . 
+
+{
+   "Version": "2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "ec2:*",
+            "elasticloadbalancing:*",
+            "autoscaling:*",
+            "cloudwatch:*",
+            "s3:*",
+            "sns:*",
+            "rds:*",
+            "cloudformation:*"
+         ],
+         "Resource":"*"
+      }
+   ]
+}
